@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A noktasından B noktasına güvenli ve konforlu evcil hayvan transferi. Hemen arayın veya WhatsApp'tan yazın.">
+    <title>PetTransfer - Güvenli Evcil Hayvan Taksi</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Arka plan görseli için koyu bir katman (overlay) */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-md fixed w-full z-10 top-0">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold text-orange-600">
+                <i class="fa-solid fa-paw mr-2"></i>PetTransfer
+            </div>
+            <div class="hidden md:flex space-x-4">
+                <a href="tel:+905555555555" class="text-gray-600 hover:text-orange-600 font-semibold"><i class="fa-solid fa-phone mr-1"></i> Bizi Arayın</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow mt-16">
+        <section class="hero-bg h-[80vh] min-h-[500px] flex items-center justify-center text-center px-4">
+            <div class="max-w-3xl text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Küçük Dostlarınız İçin <br> <span class="text-orange-400">Güvenli Yolculuk</span></h1>
+                <p class="text-lg md:text-xl mb-10 text-gray-200">Klinik ziyaretleri, taşınma veya seyahat... Evcil hayvanlarınızı A noktasından B noktasına klimalı ve steril araçlarımızla stres yaşatmadan transfer ediyoruz.</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://wa.me/905555555555?text=Merhaba,%20evcil%20hayvan%20transferi%20hakkında%20bilgi%20almak%20istiyorum." 
+                       target="_blank" 
+                       class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transform transition hover:scale-105 text-lg flex items-center justify-center w-full sm:w-auto">
+                        <i class="fa-brands fa-whatsapp text-2xl mr-3"></i> WhatsApp'tan Yazın
+                    </a>
+                    
+                    <a href="tel:+905555555555" 
+                       class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transform transition hover:scale-105 text-lg flex items-center justify-center w-full sm:w-auto">
+                        <i class="fa-solid fa-phone-volume text-xl mr-3"></i> Hemen Arayın
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white px-4">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-10 text-gray-800">Nasıl Çalışıyoruz?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-sm border border-gray-100">
+                        <div class="text-orange-500 text-4xl mb-4"><i class="fa-solid fa-truck-medical"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Steril & Klimalı Araçlar</h3>
+                        <p class="text-gray-600">Her transferden sonra dezenfekte edilen, dostlarımızın konforuna uygun sıcaklıkta araçlar.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-sm border border-gray-100">
+                        <div class="text-orange-500 text-4xl mb-4"><i class="fa-solid fa-clock"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Hızlı & Tam Zamanında</h3>
+                        <p class="text-gray-600">Planlanan saatte kapınızdayız. Acil klinik transferleri için öncelikli hizmet.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-sm border border-gray-100">
+                        <div class="text-orange-500 text-4xl mb-4"><i class="fa-solid fa-heart"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Hayvansever Ekip</h3>
+                        <p class="text-gray-600">Sadece taşıma yapmıyoruz, onların stresini anlayan profesyonel bir ekiple çalışıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center px-4">
+        <div class="max-w-6xl mx-auto">
+            <p class="mb-2">&copy; 2026 PetTransfer - Tüm Hakları Saklıdır.</p>
+            <p class="text-sm">Bu site sadece bilgi amaçlı tasarlanmıştır.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
