@@ -14,10 +14,14 @@
         gtag('config', 'G-DJS2XKS78L');
     </script>
 
+    <!-- Preconnect for faster resource loading -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
     <!-- Temel SEO -->
     <title>Pet Taksi İstanbul | Evcil Hayvan Transferi 7/24 | Pet Can Transfer</title>
     <meta name="description" content="İstanbul içi ve tüm Türkiye'ye klimalı, güvenli pet taksi hizmeti. 7/24 steril araçlar ve uzman ekibimizle evcil hayvan transferi. Hemen fiyat alın!">
-        <meta name="author" content="Pet Can Transfer">
+    <meta name="author" content="Pet Can Transfer">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pettransfer.shop/">
     <!-- <link rel="apple-touch-icon" href="assets/images/favicon.png"> -->
@@ -103,9 +107,10 @@
     }
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <style>
         /* Yatay Kayma Animasyonu için Keyframes */
@@ -388,7 +393,8 @@
             </div>
             <div class="h-64 rounded-xl overflow-hidden shadow-inner border border-gray-200">
                 <iframe
-                    src="https://maps.google.com/maps?q=Yakuplu,+56.+Sok.+No:32,+Beylikdüzü,+İstanbul&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    src="about:blank"
+                    data-src="https://maps.google.com/maps?q=Yakuplu,+56.+Sok.+No:32,+Beylikdüzü,+İstanbul&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
@@ -429,6 +435,25 @@
         </div>
     </footer>
 
+    <script>
+        // Lazy load Google Maps iframe when it enters viewport
+        document.addEventListener('DOMContentLoaded', function() {
+            var mapIframe = document.querySelector('iframe[data-src]');
+            if (mapIframe && 'IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.src = entry.target.dataset.src;
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { rootMargin: '200px' });
+                observer.observe(mapIframe);
+            } else if (mapIframe) {
+                mapIframe.src = mapIframe.dataset.src;
+            }
+        });
+    </script>
 </body>
 
 </html>
